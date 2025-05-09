@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gioco della Vita</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="overlay" class="overlay">
+    <div class="intro-box">
+      <h1>Benvenuto nel Gioco della Vita</h1>
+      <p>Ogni azione quotidiana ti fa guadagnare XP, salire di livello e migliorare la tua vita!</p>
+      <button id="startGame">Inizia</button>
+    </div>
+  </div>
+
+  <header>
+    <h2>Livello: <span id="level">1</span> — <span id="material">Polvere</span></h2>
+    <p>XP: <span id="xp">0</span> / <span id="xpNext">100</span></p>
+    <p>Energia: <span id="energy">100</span>/100</p>
+    <p>Giorno: <span id="currentDay">1</span></p>
+  </header>
+
+  <main>
+    <section class="rooms">
+      <button class="room" data-room="studio">Studio</button>
+      <button class="room" data-room="lavoro">Lavoro</button>
+      <button class="room" data-room="pulizie">Pulizie</button>
+      <button class="room" data-room="creatività">Creatività</button>
+      <button class="room" data-room="apprendimento">Apprendimento</button>
+      <button class="room" data-room="finanze">Finanze</button>
+    </section>
+
+    <section id="actionsPanel" class="actions hidden">
+      <h3 id="roomTitle">Stanza</h3>
+      <div id="actionsList"></div>
+      <button id="closeActions">Chiudi</button>
+    </section>
+  </main>
+
+  <footer>
+    <small>Progressi salvati automaticamente - Il giorno avanza a mezzanotte</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
